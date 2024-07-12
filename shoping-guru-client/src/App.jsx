@@ -23,10 +23,7 @@ function App() {
       <ProductList addToCart={addToCart} />
       <Cart cart={cart} handleDelete={handleDelete} />
       {/* for toast */}
-      <Toaster
-  position="top-right"
-  reverseOrder={false}
-/>
+      <Toaster position="top-right" reverseOrder={false} />
     </div>
   );
 }

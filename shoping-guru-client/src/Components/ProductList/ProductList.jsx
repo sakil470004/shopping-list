@@ -1,5 +1,6 @@
 // src/components/ProductList.js
 import { useEffect, useState } from "react";
+import axios from "axios";
 import AddProduct from "../AddProduct/AddProduct";
 import Product from "../Product/Product";
 import toast from "react-hot-toast";
@@ -8,9 +9,16 @@ const ProductList = ({ addToCart }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("shopping.json")
-      .then((response) => response.json())
-      .then((data) => setProducts(data));
+    axios
+      .get("http://localhost:8000/")
+      .then((res) => {
+        const data = res.data;
+        // console.log(data);
+        setProducts(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   const addProduct = (product) => {
