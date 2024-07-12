@@ -29,3 +29,81 @@ python manage.py startapp myapp
 # 7. create a form
 # 8. create a admin
 # 9. create a test
+
+# extra details for deleting and recreating db
+If you want to delete old database data and models in Django and create new ones, you can follow these steps:
+
+1. **Delete the Old Database File (if using SQLite):**
+   If you are using SQLite, you can simply delete the old database file. This file is usually named `db.sqlite3`.
+
+2. **Delete Migration Files:**
+   Delete all the migration files in each app's `migrations` directory, except for the `__init__.py` file. Migration files are typically named like `0001_initial.py`, `0002_auto_xyz.py`, etc.
+
+   Example:
+   ```sh
+   find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
+   find . -path "*/migrations/*.pyc"  -delete
+   ```
+
+3. **Create New Migrations:**
+   After deleting the old migration files and the database, you need to create new migrations for your models.
+
+   ```sh
+   python manage.py makemigrations
+   ```
+
+4. **Migrate to Apply the New Migrations:**
+   Apply the new migrations to create the database schema.
+
+   ```sh
+   python manage.py migrate
+   ```
+
+Here’s a more detailed step-by-step guide:
+
+### Step 1: Delete the Old Database File
+
+If you're using SQLite, delete the `db.sqlite3` file from your project directory.
+
+```sh
+rm db.sqlite3
+```
+
+### Step 2: Delete Old Migration Files
+
+Delete the migration files for each app (except for `__init__.py`).
+
+```sh
+find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
+find . -path "*/migrations/*.pyc"  -delete
+```
+
+### Step 3: Create New Migrations
+
+Run the `makemigrations` command to create new migration files based on your current models.
+
+```sh
+python manage.py makemigrations
+```
+
+### Step 4: Migrate to Apply the New Migrations
+
+Run the `migrate` command to apply the new migrations and create the database schema.
+
+```sh
+python manage.py migrate
+```
+
+### Example Commands
+
+Here's how the sequence of commands would look:
+
+```sh
+rm db.sqlite3
+find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
+find . -path "*/migrations/*.pyc"  -delete
+python manage.py makemigrations
+python manage.py migrate
+```
+
+After completing these steps, your old database data and models will be deleted, and a new database schema will be created based on your current models. If you're using a different database (like PostgreSQL or MySQL), you'll need to drop the existing database and create a new one instead of deleting a file.
