@@ -12,7 +12,7 @@ const ProductList = ({ addToCart }) => {
   // for handle api call
   useEffect(() => {
     axios
-      .get("http://localhost:8000/")
+      .get("http://52.63.104.102:8000/")
       .then((res) => {
         const data = res.data;
         // console.log(data);

@@ -10,7 +10,7 @@ const AddProduct = ({ addProduct }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8000/", {
+      .post("http://52.63.104.102:8000/", {
         name: name,
         description: description,
         price: price,
