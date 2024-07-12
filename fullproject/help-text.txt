@@ -1,5 +1,5 @@
 # install django framework in virtual environment using pipenv
-pipenv install djangorestframewor
+pipenv install djangorestframework
 # activate the virtual environment
 pipenv shell
 #install cors headers
