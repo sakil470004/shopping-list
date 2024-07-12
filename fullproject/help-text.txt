@@ -1,0 +1,31 @@
+# install django framework in virtual environment using pipenv
+pipenv install djangorestframewor
+# activate the virtual environment
+pipenv shell
+#install cors headers
+pipenv install django-cors-headers
+# create a project
+django-admin startproject mysite
+# for running the server
+python manage.py runserver
+# for migration
+python manage.py makemigrations
+python manage.py migrate
+# for creating superuser
+python manage.py createsuperuser
+
+#open the shell
+python manage.py shell
+#step by step how this project was created
+# 1. create a project
+django-admin startproject mysite
+# 2. create an app
+python manage.py startapp myapp
+# 3. create a model
+# 4. create a view
+# 5. create a template
+
+# 6. create a url
+# 7. create a form
+# 8. create a admin
+# 9. create a test

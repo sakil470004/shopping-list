@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Pakhi Cloth",
+    "description": "This is popular in India. It also goes for this; it may feel like you are a bird.",
+    "price": 20
+  },
+  {
+    "name": "Silk Sari",
+    "description": "Luxurious silk sari from Varanasi, perfect for weddings.",
+    "price": 120
+  },
+  {
+    "name": "Cotton Kurta",
+    "description": "Comfortable cotton kurta for casual wear.",
+    "price": 35
+  },
+  {
+    "name": "Leather Jacket",
+    "description": "Stylish leather jacket for a trendy look.",
+    "price": 150
+  },
+  {
+    "name": "Denim Jeans",
+    "description": "Classic denim jeans, perfect for everyday wear.",
+    "price": 40
+  },
+  {
+    "name": "Woolen Sweater",
+    "description": "Cozy woolen sweater to keep you warm in winter.",
+    "price": 60
+  },
+  {
+    "name": "Sports Shoes",
+    "description": "Comfortable and durable sports shoes for all activities.",
+    "price": 75
+  },
+  {
+    "name": "Formal Suit",
+    "description": "Elegant formal suit for business meetings and events.",
+    "price": 200
+  },
+  {
+    "name": "Casual T-Shirt",
+    "description": "Cool and comfortable casual T-shirt for everyday wear.",
+    "price": 25
+  },
+  {
+    "name": "Designer Dress",
+    "description": "Beautiful designer dress for special occasions.",
+    "price": 180
+  },
+  {
+    "name": "Traditional Dhoti",
+    "description": "Traditional Indian dhoti, ideal for cultural events.",
+    "price": 30
+  },
+  {
+    "name": "Leather Belt",
+    "description": "High-quality leather belt to complement your outfit.",
+    "price": 45
+  }
+]
