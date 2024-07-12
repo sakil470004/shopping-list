@@ -45,7 +45,7 @@ const ProductList = ({ addToCart }) => {
         <div>
           <h1 className="text-2xl font-bold mb-4">Product List</h1>
           {/* search input */}
-          <div className="relative shadow-lg rounded mb-4 my-4 px-4">
+          <div className="relative shadow-md rounded mb-4 my-4 px-4">
             <input
               type="text"
               placeholder="Search product"
@@ -55,7 +55,7 @@ const ProductList = ({ addToCart }) => {
             {/* cross button for search clear*/}
             <button
               onClick={() => setSearch("")}
-              className="bg-red-500 text-white px-2  rounded absolute right-0 top-0 mt-2 mr-2"
+              className="bg-red-500 text-white px-2  rounded absolute right-4 top-0 mt-2 mr-2"
             >
               Clear
             </button>

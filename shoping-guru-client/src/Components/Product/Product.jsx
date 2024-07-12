@@ -6,7 +6,7 @@ const Product = ({ product ,addToCart }) => {
             <h2 className="text-xl font-semibold">{product?.name}</h2>
             <p>{product?.description}</p>
           <div className="flex justify-between items-center mt-2">
-          <p className="text-lg font-bold text-yellow-400">${product?.price}</p>
+          <p className="text-lg font-bold text-yellow-700">${product?.price}</p>
             <button onClick={()=>addToCart(product)} className="bg-blue-500 text-white px-2 py-1 rounded">Add to Cart</button>
           </div>
 
